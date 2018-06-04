@@ -1,0 +1,8 @@
+<div>
+  <div>Running time: {{runningTime}}</div>
+  <button (click)="resetFields()">Test zurücksetzen</button>
+  <button (click)="runPerformanceTest()">Run Performance Test</button>
+  <mat-list #performanceDataList *ngIf="isPerformanceTestRunning">
+    <mat-list-item *ngFor="let data of performanceData">{{data}}</mat-list-item>
+  </mat-list>
+</div>

@@ -1,0 +1,11 @@
+<div>
+  Datei zum lesen auswählen:
+  <input type="file" accept="text/plain, text/html, application/json" (change)="changeListener($event)">
+  <div>
+    <h2>Dateiinhalt</h2>
+    <textarea #filecontent>
+    {{fileContent}}
+    </textarea>
+    <button (click)="saveToDevice()">Speichern</button>
+  </div>
+</div>
