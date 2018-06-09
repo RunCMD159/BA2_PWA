@@ -28,7 +28,6 @@ export class FileComponent implements OnInit {
     const myReader: FileReader = new FileReader();
 
     myReader.onloadend = (e) => {
-      // you can perform an action with readed data here
       console.log(myReader.result);
       this.fileContent = myReader.result;
     };
@@ -37,7 +36,6 @@ export class FileComponent implements OnInit {
   }
 
   saveToDevice() {
-    console.log('save');
     const text = this.content.nativeElement.value;
     const blob = new Blob([text], {type: 'text/plain'});
     const url = window.URL.createObjectURL(blob);
